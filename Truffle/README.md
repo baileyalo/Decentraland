@@ -26,6 +26,8 @@ update config file with compiler versions
 
 update config file https://ropsten.infura.io/v3/a5810a1d99f246608d85248e4c20594d"
 
+run Ganache : ganache-cli
+
 truffle compile
 
 
