@@ -112,5 +112,7 @@ Final message to confirm that the server is functioning:
 ![img3](https://user-images.githubusercontent.com/90293555/152281785-51106824-b01b-49f2-b0b5-b5cabdcb5756.jpg)
 
 
+![img4](https://user-images.githubusercontent.com/90293555/152284083-3f07befb-8fe9-4f8a-b416-fd5931f79107.jpg)
+
 
 https://www.reddit.com/r/decentraland/comments/m0xujc/decentralizing_decentraland_content_setting_up_a/
