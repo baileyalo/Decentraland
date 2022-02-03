@@ -1,5 +1,9 @@
 
 
+Description:
+
+Decentraland is a 3D virtual world platform. Users may buy virtual plots of land in the platform as NFTs via the MANA cryptocurrency, which uses the Ethereum blockchain.
+
 #  Hardhat Project
 
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
@@ -55,3 +59,44 @@ error:
 8. RUN:  npx hardhat run scripts/deploy.js --network ropsten
 
     error: ProviderError: max code size exceeded
+
+
+
+
+
+
+CATALYST
+
+Setting up a Catalyst Node on Ubuntu 20.4 using virtualbox
+
+
+1. Install Docker
+
+2. Install Docker-Compose
+
+3. Add $USER to Docker Group
+
+4. Verify Docker Install
+
+5. Verify Docker-Compose Install
+
+6. Stop Apache2
+
+7. Install Git
+
+8. Create Directory for Catalyst Source Code
+
+9. Download Catalyst-Owner from Decentraland's Github
+
+11. Edit Environment File .env
+
+12. Create Storage Folder
+
+13. Bridge the connection for the virtual machine 
+
+
+Final message to confirm that the server is functioning:
+
+// Catalyst server is up and running at http://localhost
+
+https://www.reddit.com/r/decentraland/comments/m0xujc/decentralizing_decentraland_content_setting_up_a/
