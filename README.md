@@ -94,6 +94,10 @@ Setting up a Catalyst Node on Ubuntu 20.4 using virtualbox
 
 13. Bridge the connection for the virtual machine 
 
+error : 
+
+![img](https://user-images.githubusercontent.com/90293555/152281203-7d45ae1b-2867-48af-ad98-f4f82c32773b.jpg)
+
 
 Final message to confirm that the server is functioning:
 
