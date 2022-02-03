@@ -6,6 +6,9 @@ Decentraland is a 3D virtual world platform. Users may buy virtual plots of land
 
 #  Hardhat Project
 
+![image](https://user-images.githubusercontent.com/90293555/152398861-786d817d-1fc9-48d2-8953-1dee6594b38b.png)
+
+
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
 
 Try running some of the following tasks:
@@ -21,6 +24,9 @@ npx hardhat help
 ```
 Setup Hardhat Project
 
+![image](https://user-images.githubusercontent.com/90293555/152398880-2fd0390d-decf-4922-ab14-700d17875b17.png)
+
+
 1. npm install --save-dev hardhat
 
 2. npx hardhat
@@ -28,6 +34,9 @@ Setup Hardhat Project
 3. Create Deploy.js to deploy contract 
 
 4. Add .env that include Ropsten test "PUBLIC_KEY" "PRIVATE_KEY" 
+
+![image](https://user-images.githubusercontent.com/90293555/152398946-5ce5169e-47fb-4f98-bc66-bddf7b2ff067.png)
+
 
     "API_URL" - this using infura API @ https://infura.io/
 
@@ -67,8 +76,13 @@ error:
 
 CATALYST
 
+![image](https://user-images.githubusercontent.com/90293555/152398998-0056764a-7727-4283-b1d1-c42d5595882f.png)
+
+
 Setting up a Catalyst Node on Ubuntu 20.4 using virtualbox
 
+
+![image](https://user-images.githubusercontent.com/90293555/152399065-98ca1586-3a1d-4778-9a2c-c776208f997d.png)
 
 1. Install Docker
 
