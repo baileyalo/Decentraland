@@ -98,6 +98,11 @@ error :
 
 ![img](https://user-images.githubusercontent.com/90293555/152281203-7d45ae1b-2867-48af-ad98-f4f82c32773b.jpg)
 
+SOLVED:
+
+run mv .env-advanced.example .env-advanced in catalyst-owner  folder and then run mkdir storage
+
+![img2](https://user-images.githubusercontent.com/90293555/152281600-9be61717-2a66-40d3-93bc-f2b71af3635a.jpg)
 
 Final message to confirm that the server is functioning:
 
