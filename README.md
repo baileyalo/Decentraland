@@ -53,3 +53,5 @@ error:
 
 
 8. RUN:  npx hardhat run scripts/deploy.js --network ropsten
+
+    error: ProviderError: max code size exceeded

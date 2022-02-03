@@ -337,14 +337,6 @@ contract EstateRegistry is Migratable, IEstateRegistry, ERC721Token, ERC721Recei
     return getFingerprint(estateId) == _bytesToBytes32(fingerprint);
   }
 
-  /**
-   * @dev Safely transfers the ownership of multiple Estate IDs to another address
-   * @dev Delegates to safeTransferFrom for each transfer
-   * @dev Requires the msg sender to be the owner, approved, or operator
-   * @param from current owner of the token
-   * @param to address to receive the ownership of the given token ID
-   * @param estateIds uint256 array of IDs to be transferred
-  */
   function safeTransferManyFrom(address from, address to, uint256[] estateIds) public {
     safeTransferManyFrom(
       from,
@@ -353,16 +345,6 @@ contract EstateRegistry is Migratable, IEstateRegistry, ERC721Token, ERC721Recei
       ""
     );
   }
-
-  /**
-   * @dev Safely transfers the ownership of multiple Estate IDs to another address
-   * @dev Delegates to safeTransferFrom for each transfer
-   * @dev Requires the msg sender to be the owner, approved, or operator
-   * @param from current owner of the token
-   * @param to address to receive the ownership of the given token ID
-   * @param estateIds uint256 array of IDs to be transferred
-   * @param data bytes data to send along with a safe transfer check
-  */
   function safeTransferManyFrom(
     address from,
     address to,
@@ -380,23 +362,9 @@ contract EstateRegistry is Migratable, IEstateRegistry, ERC721Token, ERC721Recei
       );
     }
   }
-
-  /**
-   * @dev update LAND data owned by an Estate
-   * @param estateId Estate
-   * @param landId LAND to be updated
-   * @param data string metadata
-   */
   function updateLandData(uint256 estateId, uint256 landId, string data) public {
     _updateLandData(estateId, landId, data);
   }
-
-  /**
-   * @dev update LANDs data owned by an Estate
-   * @param estateId Estate id
-   * @param landIds LANDs to be updated
-   * @param data string metadata
-   */
   function updateManyLandData(uint256 estateId, uint256[] landIds, string data) public {
     uint length = landIds.length;
     for (uint i = 0; i < length; i++) {
@@ -419,13 +387,6 @@ contract EstateRegistry is Migratable, IEstateRegistry, ERC721Token, ERC721Recei
       || _interfaceId == InterfaceId_GetMetadata
       || _interfaceId == InterfaceId_VerifyFingerprint;
   }
-
-  /**
-   * @dev Internal function to mint a new Estate with some metadata
-   * @param to The address that will own the minted token
-   * @param metadata Set an initial metadata
-   * @return An uint256 representing the new token id
-   */
   function _mintEstate(address to, string metadata) internal returns (uint256) {
     require(to != address(0), "You can not mint to an empty address");
     uint256 estateId = _getNewEstateId();
@@ -435,30 +396,16 @@ contract EstateRegistry is Migratable, IEstateRegistry, ERC721Token, ERC721Recei
     return estateId;
   }
 
-  /**
-   * @dev Internal function to update an Estate metadata
-   * @dev Does not require the Estate to exist, for a public interface use `updateMetadata`
-   * @param estateId Estate id to update
-   * @param metadata string metadata
-   */
+ 
   function _updateMetadata(uint256 estateId, string metadata) internal {
     estateData[estateId] = metadata;
   }
 
-  /**
-   * @notice Return a new unique id
-   * @dev It uses totalSupply to determine the next id
-   * @return uint256 Representing the new Estate id
-   */
   function _getNewEstateId() internal view returns (uint256) {
     return totalSupply().add(1);
   }
 
-  /**
-   * @dev Appends a new LAND id to an Estate updating all related storage
-   * @param estateId Estate where the LAND should go
-   * @param landId Transfered LAND
-   */
+ 
   function _pushLandId(uint256 estateId, uint256 landId) internal {
     require(exists(estateId), "The Estate id should exist");
     require(landIdEstate[landId] == 0, "The LAND is already owned by an Estate");
@@ -476,12 +423,6 @@ contract EstateRegistry is Migratable, IEstateRegistry, ERC721Token, ERC721Recei
     emit AddLand(estateId, landId);
   }
 
-  /**
-   * @dev Removes a LAND from an Estate and transfers it to a new owner
-   * @param estateId Current owner of the LAND
-   * @param landId LAND to be transfered
-   * @param destinatary New owner
-   */
   function _transferLand(
     uint256 estateId,
     uint256 landId,
@@ -589,20 +530,13 @@ contract EstateRegistry is Migratable, IEstateRegistry, ERC721Token, ERC721Recei
     registry.updateLandData(x, y, data);
   }
 
-  /**
-   * @dev Set a new estate land balance minime token
-   * @param _newEstateLandBalance address of the new estate land balance token
-   */
   function _setEstateLandBalanceToken(address _newEstateLandBalance) internal {
     require(_newEstateLandBalance != address(0), "New estateLandBalance should not be zero address");
     emit SetEstateLandBalanceToken(estateLandBalance, _newEstateLandBalance);
     estateLandBalance = IMiniMeToken(_newEstateLandBalance);
   }
 
-   /**
-   * @dev Register an account balance
-   * @notice Register land Balance
-   */
+  
   function registerBalance() external {
     require(!registeredBalance[msg.sender], "Register Balance::The user is already registered");
 
@@ -628,10 +562,6 @@ contract EstateRegistry is Migratable, IEstateRegistry, ERC721Token, ERC721Recei
     );
   }
 
-  /**
-   * @dev Unregister an account balance
-   * @notice Unregister land Balance
-   */
   function unregisterBalance() external {
     require(registeredBalance[msg.sender], "Unregister Balance::The user not registered");
 
@@ -648,12 +578,6 @@ contract EstateRegistry is Migratable, IEstateRegistry, ERC721Token, ERC721Recei
     );
   }
 
-  /**
-   * @dev Update account balances
-   * @param _from account
-   * @param _to account
-   * @param _amount to update
-   */
   function _updateEstateLandBalance(address _from, address _to, uint256 _amount) internal {
     if (registeredBalance[_from]) {
       estateLandBalance.destroyTokens(_from, _amount);
@@ -664,11 +588,6 @@ contract EstateRegistry is Migratable, IEstateRegistry, ERC721Token, ERC721Recei
     }
   }
 
-  /**
-   * @dev Set a estate land balance minime token hardcoded because of the
-   * contraint of the proxy for using an owner
-   * Mainnet: 0x8568f23f343694650370fe5e254b55bfb704a6c7
-   */
   function setEstateLandBalanceToken() external {
     require(estateLandBalance == address(0), "estateLandBalance was set");
     _setEstateLandBalanceToken(address(0x8568f23f343694650370fe5e254b55bfb704a6c7));
