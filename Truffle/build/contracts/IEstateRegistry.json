@@ -1,0 +1,2122 @@
+{
+  "contractName": "IEstateRegistry",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_estateId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "_data",
+          "type": "string"
+        }
+      ],
+      "name": "CreateEstate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_estateId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "_landId",
+          "type": "uint256"
+        }
+      ],
+      "name": "AddLand",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_estateId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "_landId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "_destinatary",
+          "type": "address"
+        }
+      ],
+      "name": "RemoveLand",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_assetId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "_holder",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_operator",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_data",
+          "type": "string"
+        }
+      ],
+      "name": "Update",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_estateId",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "_operator",
+          "type": "address"
+        }
+      ],
+      "name": "UpdateOperator",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_operator",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_caller",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_approved",
+          "type": "bool"
+        }
+      ],
+      "name": "UpdateManager",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_registry",
+          "type": "address"
+        }
+      ],
+      "name": "SetLANDRegistry",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_previousEstateLandBalance",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_newEstateLandBalance",
+          "type": "address"
+        }
+      ],
+      "name": "SetEstateLandBalanceToken",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "name": "metadata",
+          "type": "string"
+        }
+      ],
+      "name": "mint",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.22;\r\n\r\n\r\ncontract IEstateRegistry {\r\n  function mint(address to, string metadata) external returns (uint256);\r\n  function ownerOf(uint256 _tokenId) public view returns (address _owner); // from ERC721\r\n\r\n  // Events\r\n\r\n  event CreateEstate(\r\n    address indexed _owner,\r\n    uint256 indexed _estateId,\r\n    string _data\r\n  );\r\n\r\n  event AddLand(\r\n    uint256 indexed _estateId,\r\n    uint256 indexed _landId\r\n  );\r\n\r\n  event RemoveLand(\r\n    uint256 indexed _estateId,\r\n    uint256 indexed _landId,\r\n    address indexed _destinatary\r\n  );\r\n\r\n  event Update(\r\n    uint256 indexed _assetId,\r\n    address indexed _holder,\r\n    address indexed _operator,\r\n    string _data\r\n  );\r\n\r\n  event UpdateOperator(\r\n    uint256 indexed _estateId,\r\n    address indexed _operator\r\n  );\r\n\r\n  event UpdateManager(\r\n    address indexed _owner,\r\n    address indexed _operator,\r\n    address indexed _caller,\r\n    bool _approved\r\n  );\r\n\r\n  event SetLANDRegistry(\r\n    address indexed _registry\r\n  );\r\n\r\n  event SetEstateLandBalanceToken(\r\n    address indexed _previousEstateLandBalance,\r\n    address indexed _newEstateLandBalance\r\n  );\r\n}\r\n",
+  "sourcePath": "B:\\Block Chain Development\\Advanced Blockchain Technology\\Decentraland\\Truffle\\contracts\\estate\\IEstateRegistry.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/estate/IEstateRegistry.sol",
+    "exportedSymbols": {
+      "IEstateRegistry": [
+        4409
+      ]
+    },
+    "id": 4410,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4334,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".22"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:24"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 4409,
+        "linearizedBaseContracts": [
+          4409
+        ],
+        "name": "IEstateRegistry",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 4343,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "mint",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4339,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4336,
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4343,
+                  "src": "74:10:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4335,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "74:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4338,
+                  "name": "metadata",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4343,
+                  "src": "86:15:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 4337,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "86:6:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "73:29:24"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 4342,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4341,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4343,
+                  "src": "121:7:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4340,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "121:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "120:9:24"
+            },
+            "scope": 4409,
+            "src": "60:70:24",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 4350,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "ownerOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4346,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4345,
+                  "name": "_tokenId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4350,
+                  "src": "151:16:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4344,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "151:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "150:18:24"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 4349,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4348,
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4350,
+                  "src": "190:14:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4347,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "190:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "189:16:24"
+            },
+            "scope": 4409,
+            "src": "134:72:24",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 4358,
+            "name": "CreateEstate",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 4357,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4352,
+                  "indexed": true,
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4358,
+                  "src": "267:22:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4351,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "267:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4354,
+                  "indexed": true,
+                  "name": "_estateId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4358,
+                  "src": "296:25:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4353,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "296:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4356,
+                  "indexed": false,
+                  "name": "_data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4358,
+                  "src": "328:12:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 4355,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "328:6:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "260:85:24"
+            },
+            "src": "242:104:24"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 4364,
+            "name": "AddLand",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 4363,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4360,
+                  "indexed": true,
+                  "name": "_estateId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4364,
+                  "src": "372:25:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4359,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "372:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4362,
+                  "indexed": true,
+                  "name": "_landId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4364,
+                  "src": "404:23:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4361,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "404:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "365:67:24"
+            },
+            "src": "352:81:24"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 4372,
+            "name": "RemoveLand",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 4371,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4366,
+                  "indexed": true,
+                  "name": "_estateId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4372,
+                  "src": "462:25:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4365,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "462:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4368,
+                  "indexed": true,
+                  "name": "_landId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4372,
+                  "src": "494:23:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4367,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "494:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4370,
+                  "indexed": true,
+                  "name": "_destinatary",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4372,
+                  "src": "524:28:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4369,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "524:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "455:102:24"
+            },
+            "src": "439:119:24"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 4382,
+            "name": "Update",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 4381,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4374,
+                  "indexed": true,
+                  "name": "_assetId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4382,
+                  "src": "583:24:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4373,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "583:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4376,
+                  "indexed": true,
+                  "name": "_holder",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4382,
+                  "src": "614:23:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4375,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "614:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4378,
+                  "indexed": true,
+                  "name": "_operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4382,
+                  "src": "644:25:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4377,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "644:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4380,
+                  "indexed": false,
+                  "name": "_data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4382,
+                  "src": "676:12:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 4379,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "676:6:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "576:117:24"
+            },
+            "src": "564:130:24"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 4388,
+            "name": "UpdateOperator",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 4387,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4384,
+                  "indexed": true,
+                  "name": "_estateId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4388,
+                  "src": "727:25:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4383,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "727:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4386,
+                  "indexed": true,
+                  "name": "_operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4388,
+                  "src": "759:25:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4385,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "759:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "720:69:24"
+            },
+            "src": "700:90:24"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 4398,
+            "name": "UpdateManager",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 4397,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4390,
+                  "indexed": true,
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4398,
+                  "src": "822:22:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4389,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "822:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4392,
+                  "indexed": true,
+                  "name": "_operator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4398,
+                  "src": "851:25:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4391,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "851:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4394,
+                  "indexed": true,
+                  "name": "_caller",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4398,
+                  "src": "883:23:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4393,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "883:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4396,
+                  "indexed": false,
+                  "name": "_approved",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4398,
+                  "src": "913:14:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4395,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "913:4:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "815:117:24"
+            },
+            "src": "796:137:24"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 4402,
+            "name": "SetLANDRegistry",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 4401,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4400,
+                  "indexed": true,
+                  "name": "_registry",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4402,
+                  "src": "967:25:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4399,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "967:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "960:37:24"
+            },
+            "src": "939:59:24"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 4408,
+            "name": "SetEstateLandBalanceToken",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 4407,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4404,
+                  "indexed": true,
+                  "name": "_previousEstateLandBalance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4408,
+                  "src": "1042:42:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4403,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1042:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4406,
+                  "indexed": true,
+                  "name": "_newEstateLandBalance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4408,
+                  "src": "1091:37:24",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4405,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1091:7:24",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1035:98:24"
+            },
+            "src": "1004:130:24"
+          }
+        ],
+        "scope": 4410,
+        "src": "30:1107:24"
+      }
+    ],
+    "src": "0:1139:24"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/estate/IEstateRegistry.sol",
+      "exportedSymbols": {
+        "IEstateRegistry": [
+          4409
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".22"
+          ]
+        },
+        "id": 4334,
+        "name": "PragmaDirective",
+        "src": "0:24:24"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            4409
+          ],
+          "name": "IEstateRegistry",
+          "scope": 4410
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "mint",
+              "payable": false,
+              "scope": 4409,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "to",
+                      "scope": 4343,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 4335,
+                        "name": "ElementaryTypeName",
+                        "src": "74:7:24"
+                      }
+                    ],
+                    "id": 4336,
+                    "name": "VariableDeclaration",
+                    "src": "74:10:24"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "metadata",
+                      "scope": 4343,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 4337,
+                        "name": "ElementaryTypeName",
+                        "src": "86:6:24"
+                      }
+                    ],
+                    "id": 4338,
+                    "name": "VariableDeclaration",
+                    "src": "86:15:24"
+                  }
+                ],
+                "id": 4339,
+                "name": "ParameterList",
+                "src": "73:29:24"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 4343,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 4340,
+                        "name": "ElementaryTypeName",
+                        "src": "121:7:24"
+                      }
+                    ],
+                    "id": 4341,
+                    "name": "VariableDeclaration",
+                    "src": "121:7:24"
+                  }
+                ],
+                "id": 4342,
+                "name": "ParameterList",
+                "src": "120:9:24"
+              }
+            ],
+            "id": 4343,
+            "name": "FunctionDefinition",
+            "src": "60:70:24"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": true,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "ownerOf",
+              "payable": false,
+              "scope": 4409,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_tokenId",
+                      "scope": 4350,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 4344,
+                        "name": "ElementaryTypeName",
+                        "src": "151:7:24"
+                      }
+                    ],
+                    "id": 4345,
+                    "name": "VariableDeclaration",
+                    "src": "151:16:24"
+                  }
+                ],
+                "id": 4346,
+                "name": "ParameterList",
+                "src": "150:18:24"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_owner",
+                      "scope": 4350,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 4347,
+                        "name": "ElementaryTypeName",
+                        "src": "190:7:24"
+                      }
+                    ],
+                    "id": 4348,
+                    "name": "VariableDeclaration",
+                    "src": "190:14:24"
+                  }
+                ],
+                "id": 4349,
+                "name": "ParameterList",
+                "src": "189:16:24"
+              }
+            ],
+            "id": 4350,
+            "name": "FunctionDefinition",
+            "src": "134:72:24"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "CreateEstate"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_owner",
+                      "scope": 4358,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 4351,
+                        "name": "ElementaryTypeName",
+                        "src": "267:7:24"
+                      }
+                    ],
+                    "id": 4352,
+                    "name": "VariableDeclaration",
+                    "src": "267:22:24"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_estateId",
+                      "scope": 4358,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 4353,
+                        "name": "ElementaryTypeName",
+                        "src": "296:7:24"
+                      }
+                    ],
+                    "id": 4354,
+                    "name": "VariableDeclaration",
+                    "src": "296:25:24"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "_data",
+                      "scope": 4358,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 4355,
+                        "name": "ElementaryTypeName",
+                        "src": "328:6:24"
+                      }
+                    ],
+                    "id": 4356,
+                    "name": "VariableDeclaration",
+                    "src": "328:12:24"
+                  }
+                ],
+                "id": 4357,
+                "name": "ParameterList",
+                "src": "260:85:24"
+              }
+            ],
+            "id": 4358,
+            "name": "EventDefinition",
+            "src": "242:104:24"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "AddLand"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_estateId",
+                      "scope": 4364,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 4359,
+                        "name": "ElementaryTypeName",
+                        "src": "372:7:24"
+                      }
+                    ],
+                    "id": 4360,
+                    "name": "VariableDeclaration",
+                    "src": "372:25:24"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_landId",
+                      "scope": 4364,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 4361,
+                        "name": "ElementaryTypeName",
+                        "src": "404:7:24"
+                      }
+                    ],
+                    "id": 4362,
+                    "name": "VariableDeclaration",
+                    "src": "404:23:24"
+                  }
+                ],
+                "id": 4363,
+                "name": "ParameterList",
+                "src": "365:67:24"
+              }
+            ],
+            "id": 4364,
+            "name": "EventDefinition",
+            "src": "352:81:24"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "RemoveLand"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_estateId",
+                      "scope": 4372,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 4365,
+                        "name": "ElementaryTypeName",
+                        "src": "462:7:24"
+                      }
+                    ],
+                    "id": 4366,
+                    "name": "VariableDeclaration",
+                    "src": "462:25:24"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_landId",
+                      "scope": 4372,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 4367,
+                        "name": "ElementaryTypeName",
+                        "src": "494:7:24"
+                      }
+                    ],
+                    "id": 4368,
+                    "name": "VariableDeclaration",
+                    "src": "494:23:24"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_destinatary",
+                      "scope": 4372,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 4369,
+                        "name": "ElementaryTypeName",
+                        "src": "524:7:24"
+                      }
+                    ],
+                    "id": 4370,
+                    "name": "VariableDeclaration",
+                    "src": "524:28:24"
+                  }
+                ],
+                "id": 4371,
+                "name": "ParameterList",
+                "src": "455:102:24"
+              }
+            ],
+            "id": 4372,
+            "name": "EventDefinition",
+            "src": "439:119:24"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "Update"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_assetId",
+                      "scope": 4382,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 4373,
+                        "name": "ElementaryTypeName",
+                        "src": "583:7:24"
+                      }
+                    ],
+                    "id": 4374,
+                    "name": "VariableDeclaration",
+                    "src": "583:24:24"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_holder",
+                      "scope": 4382,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 4375,
+                        "name": "ElementaryTypeName",
+                        "src": "614:7:24"
+                      }
+                    ],
+                    "id": 4376,
+                    "name": "VariableDeclaration",
+                    "src": "614:23:24"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_operator",
+                      "scope": 4382,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 4377,
+                        "name": "ElementaryTypeName",
+                        "src": "644:7:24"
+                      }
+                    ],
+                    "id": 4378,
+                    "name": "VariableDeclaration",
+                    "src": "644:25:24"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "_data",
+                      "scope": 4382,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 4379,
+                        "name": "ElementaryTypeName",
+                        "src": "676:6:24"
+                      }
+                    ],
+                    "id": 4380,
+                    "name": "VariableDeclaration",
+                    "src": "676:12:24"
+                  }
+                ],
+                "id": 4381,
+                "name": "ParameterList",
+                "src": "576:117:24"
+              }
+            ],
+            "id": 4382,
+            "name": "EventDefinition",
+            "src": "564:130:24"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "UpdateOperator"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_estateId",
+                      "scope": 4388,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 4383,
+                        "name": "ElementaryTypeName",
+                        "src": "727:7:24"
+                      }
+                    ],
+                    "id": 4384,
+                    "name": "VariableDeclaration",
+                    "src": "727:25:24"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_operator",
+                      "scope": 4388,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 4385,
+                        "name": "ElementaryTypeName",
+                        "src": "759:7:24"
+                      }
+                    ],
+                    "id": 4386,
+                    "name": "VariableDeclaration",
+                    "src": "759:25:24"
+                  }
+                ],
+                "id": 4387,
+                "name": "ParameterList",
+                "src": "720:69:24"
+              }
+            ],
+            "id": 4388,
+            "name": "EventDefinition",
+            "src": "700:90:24"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "UpdateManager"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_owner",
+                      "scope": 4398,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 4389,
+                        "name": "ElementaryTypeName",
+                        "src": "822:7:24"
+                      }
+                    ],
+                    "id": 4390,
+                    "name": "VariableDeclaration",
+                    "src": "822:22:24"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_operator",
+                      "scope": 4398,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 4391,
+                        "name": "ElementaryTypeName",
+                        "src": "851:7:24"
+                      }
+                    ],
+                    "id": 4392,
+                    "name": "VariableDeclaration",
+                    "src": "851:25:24"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_caller",
+                      "scope": 4398,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 4393,
+                        "name": "ElementaryTypeName",
+                        "src": "883:7:24"
+                      }
+                    ],
+                    "id": 4394,
+                    "name": "VariableDeclaration",
+                    "src": "883:23:24"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "_approved",
+                      "scope": 4398,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 4395,
+                        "name": "ElementaryTypeName",
+                        "src": "913:4:24"
+                      }
+                    ],
+                    "id": 4396,
+                    "name": "VariableDeclaration",
+                    "src": "913:14:24"
+                  }
+                ],
+                "id": 4397,
+                "name": "ParameterList",
+                "src": "815:117:24"
+              }
+            ],
+            "id": 4398,
+            "name": "EventDefinition",
+            "src": "796:137:24"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "SetLANDRegistry"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_registry",
+                      "scope": 4402,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 4399,
+                        "name": "ElementaryTypeName",
+                        "src": "967:7:24"
+                      }
+                    ],
+                    "id": 4400,
+                    "name": "VariableDeclaration",
+                    "src": "967:25:24"
+                  }
+                ],
+                "id": 4401,
+                "name": "ParameterList",
+                "src": "960:37:24"
+              }
+            ],
+            "id": 4402,
+            "name": "EventDefinition",
+            "src": "939:59:24"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "SetEstateLandBalanceToken"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_previousEstateLandBalance",
+                      "scope": 4408,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 4403,
+                        "name": "ElementaryTypeName",
+                        "src": "1042:7:24"
+                      }
+                    ],
+                    "id": 4404,
+                    "name": "VariableDeclaration",
+                    "src": "1042:42:24"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_newEstateLandBalance",
+                      "scope": 4408,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 4405,
+                        "name": "ElementaryTypeName",
+                        "src": "1091:7:24"
+                      }
+                    ],
+                    "id": 4406,
+                    "name": "VariableDeclaration",
+                    "src": "1091:37:24"
+                  }
+                ],
+                "id": 4407,
+                "name": "ParameterList",
+                "src": "1035:98:24"
+              }
+            ],
+            "id": 4408,
+            "name": "EventDefinition",
+            "src": "1004:130:24"
+          }
+        ],
+        "id": 4409,
+        "name": "ContractDefinition",
+        "src": "30:1107:24"
+      }
+    ],
+    "id": 4410,
+    "name": "SourceUnit",
+    "src": "0:1139:24"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-02-03T17:24:10.828Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

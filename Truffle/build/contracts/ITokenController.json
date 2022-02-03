@@ -1,0 +1,947 @@
+{
+  "contractName": "ITokenController",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "proxyPayment",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "onTransfer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_spender",
+          "type": "address"
+        },
+        {
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "onApprove",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.24;\r\n\r\n/// @dev The token controller contract must implement these functions\r\n\r\n\r\ninterface ITokenController {\r\n    /// @notice Called when `_owner` sends ether to the MiniMe Token contract\r\n    /// @param _owner The address that sent the ether to create tokens\r\n    /// @return True if the ether is accepted, false if it throws\r\n    function proxyPayment(address _owner) external payable returns(bool);\r\n\r\n    /// @notice Notifies the controller about a token transfer allowing the\r\n    ///  controller to react if desired\r\n    /// @param _from The origin of the transfer\r\n    /// @param _to The destination of the transfer\r\n    /// @param _amount The amount of the transfer\r\n    /// @return False if the controller does not authorize the transfer\r\n    function onTransfer(address _from, address _to, uint _amount) external returns(bool);\r\n\r\n    /// @notice Notifies the controller about an approval allowing the\r\n    ///  controller to react if desired\r\n    /// @param _owner The address that calls `approve()`\r\n    /// @param _spender The spender in the `approve()` call\r\n    /// @param _amount The amount in the `approve()` call\r\n    /// @return False if the controller does not authorize the approval\r\n    function onApprove(address _owner, address _spender, uint _amount) external returns(bool);\r\n}",
+  "sourcePath": "B:\\Block Chain Development\\Advanced Blockchain Technology\\Decentraland\\Truffle\\contracts\\minimeToken\\ITokenController.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/minimeToken/ITokenController.sol",
+    "exportedSymbols": {
+      "ITokenController": [
+        6410
+      ]
+    },
+    "id": 6411,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6380,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:30"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@dev The token controller contract must implement these functions\r",
+        "fullyImplemented": false,
+        "id": 6410,
+        "linearizedBaseContracts": [
+          6410
+        ],
+        "name": "ITokenController",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Called when `_owner` sends ether to the MiniMe Token contract\r\n @param _owner The address that sent the ether to create tokens\r\n @return True if the ether is accepted, false if it throws\r",
+            "id": 6387,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "proxyPayment",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6383,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6382,
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6387,
+                  "src": "377:14:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6381,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "377:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "376:16:30"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 6386,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6385,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6387,
+                  "src": "418:4:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 6384,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "418:4:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "417:6:30"
+            },
+            "scope": 6410,
+            "src": "355:69:30",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Notifies the controller about a token transfer allowing the\r\n  controller to react if desired\r\n @param _from The origin of the transfer\r\n @param _to The destination of the transfer\r\n @param _amount The amount of the transfer\r\n @return False if the controller does not authorize the transfer\r",
+            "id": 6398,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "onTransfer",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6394,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6389,
+                  "name": "_from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6398,
+                  "src": "795:13:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6388,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "795:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6391,
+                  "name": "_to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6398,
+                  "src": "810:11:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6390,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "810:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6393,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6398,
+                  "src": "823:12:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6392,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "823:4:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "794:42:30"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6397,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6396,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6398,
+                  "src": "854:4:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 6395,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "854:4:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "853:6:30"
+            },
+            "scope": 6410,
+            "src": "775:85:30",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Notifies the controller about an approval allowing the\r\n  controller to react if desired\r\n @param _owner The address that calls `approve()`\r\n @param _spender The spender in the `approve()` call\r\n @param _amount The amount in the `approve()` call\r\n @return False if the controller does not authorize the approval\r",
+            "id": 6409,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "onApprove",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6405,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6400,
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6409,
+                  "src": "1251:14:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6399,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1251:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6402,
+                  "name": "_spender",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6409,
+                  "src": "1267:16:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6401,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1267:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6404,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6409,
+                  "src": "1285:12:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6403,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1285:4:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1250:48:30"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6408,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6407,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6409,
+                  "src": "1316:4:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 6406,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1316:4:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1315:6:30"
+            },
+            "scope": 6410,
+            "src": "1232:90:30",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6411,
+        "src": "103:1222:30"
+      }
+    ],
+    "src": "0:1325:30"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/minimeToken/ITokenController.sol",
+      "exportedSymbols": {
+        "ITokenController": [
+          6410
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".24"
+          ]
+        },
+        "id": 6380,
+        "name": "PragmaDirective",
+        "src": "0:24:30"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": "@dev The token controller contract must implement these functions\r",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            6410
+          ],
+          "name": "ITokenController",
+          "scope": 6411
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "documentation": "@notice Called when `_owner` sends ether to the MiniMe Token contract\r\n @param _owner The address that sent the ether to create tokens\r\n @return True if the ether is accepted, false if it throws\r",
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "proxyPayment",
+              "payable": true,
+              "scope": 6410,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_owner",
+                      "scope": 6387,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 6381,
+                        "name": "ElementaryTypeName",
+                        "src": "377:7:30"
+                      }
+                    ],
+                    "id": 6382,
+                    "name": "VariableDeclaration",
+                    "src": "377:14:30"
+                  }
+                ],
+                "id": 6383,
+                "name": "ParameterList",
+                "src": "376:16:30"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 6387,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 6384,
+                        "name": "ElementaryTypeName",
+                        "src": "418:4:30"
+                      }
+                    ],
+                    "id": 6385,
+                    "name": "VariableDeclaration",
+                    "src": "418:4:30"
+                  }
+                ],
+                "id": 6386,
+                "name": "ParameterList",
+                "src": "417:6:30"
+              }
+            ],
+            "id": 6387,
+            "name": "FunctionDefinition",
+            "src": "355:69:30"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "documentation": "@notice Notifies the controller about a token transfer allowing the\r\n  controller to react if desired\r\n @param _from The origin of the transfer\r\n @param _to The destination of the transfer\r\n @param _amount The amount of the transfer\r\n @return False if the controller does not authorize the transfer\r",
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "onTransfer",
+              "payable": false,
+              "scope": 6410,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_from",
+                      "scope": 6398,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 6388,
+                        "name": "ElementaryTypeName",
+                        "src": "795:7:30"
+                      }
+                    ],
+                    "id": 6389,
+                    "name": "VariableDeclaration",
+                    "src": "795:13:30"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_to",
+                      "scope": 6398,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 6390,
+                        "name": "ElementaryTypeName",
+                        "src": "810:7:30"
+                      }
+                    ],
+                    "id": 6391,
+                    "name": "VariableDeclaration",
+                    "src": "810:11:30"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_amount",
+                      "scope": 6398,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 6392,
+                        "name": "ElementaryTypeName",
+                        "src": "823:4:30"
+                      }
+                    ],
+                    "id": 6393,
+                    "name": "VariableDeclaration",
+                    "src": "823:12:30"
+                  }
+                ],
+                "id": 6394,
+                "name": "ParameterList",
+                "src": "794:42:30"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 6398,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 6395,
+                        "name": "ElementaryTypeName",
+                        "src": "854:4:30"
+                      }
+                    ],
+                    "id": 6396,
+                    "name": "VariableDeclaration",
+                    "src": "854:4:30"
+                  }
+                ],
+                "id": 6397,
+                "name": "ParameterList",
+                "src": "853:6:30"
+              }
+            ],
+            "id": 6398,
+            "name": "FunctionDefinition",
+            "src": "775:85:30"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "documentation": "@notice Notifies the controller about an approval allowing the\r\n  controller to react if desired\r\n @param _owner The address that calls `approve()`\r\n @param _spender The spender in the `approve()` call\r\n @param _amount The amount in the `approve()` call\r\n @return False if the controller does not authorize the approval\r",
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "onApprove",
+              "payable": false,
+              "scope": 6410,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_owner",
+                      "scope": 6409,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 6399,
+                        "name": "ElementaryTypeName",
+                        "src": "1251:7:30"
+                      }
+                    ],
+                    "id": 6400,
+                    "name": "VariableDeclaration",
+                    "src": "1251:14:30"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_spender",
+                      "scope": 6409,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 6401,
+                        "name": "ElementaryTypeName",
+                        "src": "1267:7:30"
+                      }
+                    ],
+                    "id": 6402,
+                    "name": "VariableDeclaration",
+                    "src": "1267:16:30"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_amount",
+                      "scope": 6409,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 6403,
+                        "name": "ElementaryTypeName",
+                        "src": "1285:4:30"
+                      }
+                    ],
+                    "id": 6404,
+                    "name": "VariableDeclaration",
+                    "src": "1285:12:30"
+                  }
+                ],
+                "id": 6405,
+                "name": "ParameterList",
+                "src": "1250:48:30"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 6409,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 6406,
+                        "name": "ElementaryTypeName",
+                        "src": "1316:4:30"
+                      }
+                    ],
+                    "id": 6407,
+                    "name": "VariableDeclaration",
+                    "src": "1316:4:30"
+                  }
+                ],
+                "id": 6408,
+                "name": "ParameterList",
+                "src": "1315:6:30"
+              }
+            ],
+            "id": 6409,
+            "name": "FunctionDefinition",
+            "src": "1232:90:30"
+          }
+        ],
+        "id": 6410,
+        "name": "ContractDefinition",
+        "src": "103:1222:30"
+      }
+    ],
+    "id": 6411,
+    "name": "SourceUnit",
+    "src": "0:1325:30"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-02-03T17:24:10.834Z",
+  "devdoc": {
+    "methods": {
+      "onApprove(address,address,uint256)": {
+        "params": {
+          "_amount": "The amount in the `approve()` call\r",
+          "_owner": "The address that calls `approve()`\r",
+          "_spender": "The spender in the `approve()` call\r"
+        },
+        "return": "False if the controller does not authorize the approval\r"
+      },
+      "onTransfer(address,address,uint256)": {
+        "params": {
+          "_amount": "The amount of the transfer\r",
+          "_from": "The origin of the transfer\r",
+          "_to": "The destination of the transfer\r"
+        },
+        "return": "False if the controller does not authorize the transfer\r"
+      },
+      "proxyPayment(address)": {
+        "params": {
+          "_owner": "The address that sent the ether to create tokens\r"
+        },
+        "return": "True if the ether is accepted, false if it throws\r"
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "onApprove(address,address,uint256)": {
+        "notice": "Notifies the controller about an approval allowing the\r  controller to react if desired\r"
+      },
+      "onTransfer(address,address,uint256)": {
+        "notice": "Notifies the controller about a token transfer allowing the\r  controller to react if desired\r"
+      },
+      "proxyPayment(address)": {
+        "notice": "Called when `_owner` sends ether to the MiniMe Token contract\r"
+      }
+    }
+  }
+}

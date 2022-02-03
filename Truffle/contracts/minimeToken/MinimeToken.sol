@@ -34,7 +34,7 @@ contract Controlled {
 
     address public controller;
 
-    function Controlled()  public { controller = msg.sender;}
+    constructor()  public { controller = msg.sender;}
 
     /// @notice Changes the controller of the contract
     /// @param _newController The new controller of the contract
@@ -210,7 +210,7 @@ contract MiniMeToken is Controlled {
         require(previousBalanceTo + _amount >= previousBalanceTo); // Check for overflow
         updateValueAtNow(balances[_to], previousBalanceTo + _amount);
         // An event to make the transfer easy to find on the blockchain
-        Transfer(_from, _to, _amount);
+        emit Transfer(_from, _to, _amount);
         return true;
     }
 
@@ -242,7 +242,7 @@ contract MiniMeToken is Controlled {
         }
 
         allowed[msg.sender][_spender] = _amount;
-        Approval(msg.sender, _spender, _amount);
+        emit Approval(msg.sender, _spender, _amount);
         return true;
     }
 
@@ -370,7 +370,7 @@ contract MiniMeToken is Controlled {
         cloneToken.changeController(msg.sender);
 
         // An event to make the token easy to find on the blockchain
-        NewCloneToken(address(cloneToken), snapshot);
+        emit NewCloneToken(address(cloneToken), snapshot);
         return cloneToken;
     }
 
@@ -389,7 +389,7 @@ contract MiniMeToken is Controlled {
         require(previousBalanceTo + _amount >= previousBalanceTo); // Check for overflow
         updateValueAtNow(totalSupplyHistory, curTotalSupply + _amount);
         updateValueAtNow(balances[_owner], previousBalanceTo + _amount);
-        Transfer(0, _owner, _amount);
+        emit Transfer(0, _owner, _amount);
         return true;
     }
 
@@ -405,7 +405,7 @@ contract MiniMeToken is Controlled {
         require(previousBalanceFrom >= _amount);
         updateValueAtNow(totalSupplyHistory, curTotalSupply - _amount);
         updateValueAtNow(balances[_owner], previousBalanceFrom - _amount);
-        Transfer(_owner, 0, _amount);
+        emit Transfer(_owner, 0, _amount);
         return true;
     }
 
@@ -515,7 +515,7 @@ contract MiniMeToken is Controlled {
         MiniMeToken token = MiniMeToken(_token);
         uint balance = token.balanceOf(this);
         token.transfer(controller, balance);
-        ClaimedTokens(_token, controller, balance);
+        emit ClaimedTokens(_token, controller, balance);
     }
 
 ////////////////
@@ -573,7 +573,7 @@ contract MiniMeTokenFactory {
         );
 
         newToken.changeController(msg.sender);
-        NewFactoryCloneToken(address(newToken), address(_parentToken), _snapshotBlock);
+        emit NewFactoryCloneToken(address(newToken), address(_parentToken), _snapshotBlock);
         return newToken;
     }
 }

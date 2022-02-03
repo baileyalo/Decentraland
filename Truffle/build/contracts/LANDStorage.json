@@ -1,0 +1,1241 @@
+{
+  "contractName": "LANDStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "updateManager",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "latestPing",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "authorizedDeploy",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "registeredBalance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "landBalance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "updateOperator",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "estateRegistry",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.24+commit.e67f0147\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"address\"}],\"name\":\"updateManager\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"latestPing\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"authorizedDeploy\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"registeredBalance\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"landBalance\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"updateOperator\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"estateRegistry\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/land/LANDStorage.sol\":\"LANDStorage\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/estate/IEstateRegistry.sol\":{\"keccak256\":\"0x254d0d9d95e0c3ee994fe717a7eaeaa7efa12d4a212da0f04a0371c31f1004c7\",\"urls\":[\"bzzr://79cbc02dcb62de1ef522a134cda383af15acf39357eef859e53b721da1a29c9b\"]},\"project:/contracts/land/LANDStorage.sol\":{\"keccak256\":\"0xb855cffb691cc713846247d34b6e1e2b249992afc732b7b38bed710889d0cd59\",\"urls\":[\"bzzr://792cce5dd5ab46c205a5ae68cf5e6a3645af22276dd582e72a91574fbe56a4f9\"]},\"project:/contracts/minimeToken/IMinimeToken.sol\":{\"keccak256\":\"0x85d386d9a75d3d2b4d8f81875f031f41e84fb18f8aa3dca718078e9e192b0712\",\"urls\":[\"bzzr://2ffaac2488ec7abcb072d124f0ca5e3d0dc81df418fb88d62b045d5794cbbf28\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061045d806100206000396000f300608060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806307ecec3e146100885780631e3759011461010357806329ffab3b1461015a5780636087de1b146101b557806384b80004146102105780639d40b85014610267578063e387d31a146102d4575b600080fd5b34801561009457600080fd5b506100e9600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061032b565b604051808215151515815260200191505060405180910390f35b34801561010f57600080fd5b50610144600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061035a565b6040518082815260200191505060405180910390f35b34801561016657600080fd5b5061019b600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610372565b604051808215151515815260200191505060405180910390f35b3480156101c157600080fd5b506101f6600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610392565b604051808215151515815260200191505060405180910390f35b34801561021c57600080fd5b506102256103b2565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561027357600080fd5b50610292600480360381019080803590602001909291905050506103d8565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156102e057600080fd5b506102e961040b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60056020528160005260406000206020528060005260406000206000915091509054906101000a900460ff1681565b60006020528060005260406000206000915090505481565b60046020528060005260406000206000915054906101000a900460ff1681565b60076020528060005260406000206000915054906101000a900460ff1681565b600660009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60026020528060005260406000206000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a72305820dd4c9502fc04a9810d2874aacb9e1f4f67c7b07771286a4570a8d8cf43474a590029",
+  "deployedBytecode": "0x608060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806307ecec3e146100885780631e3759011461010357806329ffab3b1461015a5780636087de1b146101b557806384b80004146102105780639d40b85014610267578063e387d31a146102d4575b600080fd5b34801561009457600080fd5b506100e9600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061032b565b604051808215151515815260200191505060405180910390f35b34801561010f57600080fd5b50610144600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061035a565b6040518082815260200191505060405180910390f35b34801561016657600080fd5b5061019b600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610372565b604051808215151515815260200191505060405180910390f35b3480156101c157600080fd5b506101f6600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610392565b604051808215151515815260200191505060405180910390f35b34801561021c57600080fd5b506102256103b2565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561027357600080fd5b50610292600480360381019080803590602001909291905050506103d8565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156102e057600080fd5b506102e961040b565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60056020528160005260406000206020528060005260406000206000915091509054906101000a900460ff1681565b60006020528060005260406000206000915090505481565b60046020528060005260406000206000915054906101000a900460ff1681565b60076020528060005260406000206000915054906101000a900460ff1681565b600660009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60026020528060005260406000206000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a72305820dd4c9502fc04a9810d2874aacb9e1f4f67c7b07771286a4570a8d8cf43474a590029",
+  "sourceMap": "116:799:27:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;116:799:27;;;;;;;",
+  "deployedSourceMap": "116:799:27:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;686:65;;8:9:-1;5:2;;;30:1;27;20:12;5:2;686:65:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;142:43;;8:9:-1;5:2;;;30:1;27;20:12;5:2;142:43:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;630:49;;8:9:-1;5:2;;;30:1;27;20:12;5:2;630:49:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;862;;8:9:-1;5:2;;;30:1;27;20:12;5:2;862:49:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;790:31;;8:9:-1;5:2;;;30:1;27;20:12;5:2;790:31:27;;;;;;;;;;;;;;;;;;;;;;;;;;;529:50;;8:9:-1;5:2;;;30:1;27;20:12;5:2;529:50:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;586:37;;8:9:-1;5:2;;;30:1;27;20:12;5:2;586:37:27;;;;;;;;;;;;;;;;;;;;;;;;;;;686:65;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;142:43::-;;;;;;;;;;;;;;;;;:::o;630:49::-;;;;;;;;;;;;;;;;;;;;;;:::o;862:::-;;;;;;;;;;;;;;;;;;;;;;:::o;790:31::-;;;;;;;;;;;;;:::o;529:50::-;;;;;;;;;;;;;;;;;;;;;;:::o;586:37::-;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.23;\r\n\r\nimport \"../estate/IEstateRegistry.sol\";\r\nimport \"../minimeToken/IMinimeToken.sol\";\r\n\r\n\r\ncontract LANDStorage {\r\n  mapping (address => uint) public latestPing;\r\n\r\n  uint256 constant clearLow = 0xffffffffffffffffffffffffffffffff00000000000000000000000000000000;\r\n  uint256 constant clearHigh = 0x00000000000000000000000000000000ffffffffffffffffffffffffffffffff;\r\n  uint256 constant factor = 0x100000000000000000000000000000000;\r\n\r\n  mapping (address => bool) internal _deprecated_authorizedDeploy;\r\n\r\n  mapping (uint256 => address) public updateOperator;\r\n\r\n  IEstateRegistry public estateRegistry;\r\n\r\n  mapping (address => bool) public authorizedDeploy;\r\n\r\n  mapping(address => mapping(address => bool)) public updateManager;\r\n\r\n  // Land balance minime token\r\n  IMiniMeToken public landBalance;\r\n\r\n  // Registered balance accounts\r\n  mapping(address => bool) public registeredBalance;\r\n}\r\n",
+  "sourcePath": "B:\\Block Chain Development\\Advanced Blockchain Technology\\Decentraland\\Truffle\\contracts\\land\\LANDStorage.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/land/LANDStorage.sol",
+    "exportedSymbols": {
+      "LANDStorage": [
+        6329
+      ]
+    },
+    "id": 6330,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6287,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:27"
+      },
+      {
+        "absolutePath": "project:/contracts/estate/IEstateRegistry.sol",
+        "file": "../estate/IEstateRegistry.sol",
+        "id": 6288,
+        "nodeType": "ImportDirective",
+        "scope": 6330,
+        "sourceUnit": 4410,
+        "src": "28:39:27",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/minimeToken/IMinimeToken.sol",
+        "file": "../minimeToken/IMinimeToken.sol",
+        "id": 6289,
+        "nodeType": "ImportDirective",
+        "scope": 6330,
+        "sourceUnit": 6379,
+        "src": "69:41:27",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6329,
+        "linearizedBaseContracts": [
+          6329
+        ],
+        "name": "LANDStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 6293,
+            "name": "latestPing",
+            "nodeType": "VariableDeclaration",
+            "scope": 6329,
+            "src": "142:43:27",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 6292,
+              "keyType": {
+                "id": 6290,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "151:7:27",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "142:25:27",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 6291,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "162:4:27",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": true,
+            "id": 6296,
+            "name": "clearLow",
+            "nodeType": "VariableDeclaration",
+            "scope": 6329,
+            "src": "192:94:27",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 6294,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "192:7:27",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307866666666666666666666666666666666666666666666666666666666666666663030303030303030303030303030303030303030303030303030303030303030",
+              "id": 6295,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "220:66:27",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_115792089237316195423570985008687907852929702298719625575994209400481361428480_by_1",
+                "typeString": "int_const 1157...(70 digits omitted)...8480"
+              },
+              "value": "0xffffffffffffffffffffffffffffffff00000000000000000000000000000000"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 6299,
+            "name": "clearHigh",
+            "nodeType": "VariableDeclaration",
+            "scope": 6329,
+            "src": "291:95:27",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 6297,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "291:7:27",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307830303030303030303030303030303030303030303030303030303030303030306666666666666666666666666666666666666666666666666666666666666666",
+              "id": 6298,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "320:66:27",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_340282366920938463463374607431768211455_by_1",
+                "typeString": "int_const 3402...(31 digits omitted)...1455"
+              },
+              "value": "0x00000000000000000000000000000000ffffffffffffffffffffffffffffffff"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 6302,
+            "name": "factor",
+            "nodeType": "VariableDeclaration",
+            "scope": 6329,
+            "src": "391:61:27",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 6300,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "391:7:27",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "3078313030303030303030303030303030303030303030303030303030303030303030",
+              "id": 6301,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "417:35:27",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_340282366920938463463374607431768211456_by_1",
+                "typeString": "int_const 3402...(31 digits omitted)...1456"
+              },
+              "value": "0x100000000000000000000000000000000"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6306,
+            "name": "_deprecated_authorizedDeploy",
+            "nodeType": "VariableDeclaration",
+            "scope": 6329,
+            "src": "459:63:27",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 6305,
+              "keyType": {
+                "id": 6303,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "468:7:27",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "459:25:27",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 6304,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "479:4:27",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6310,
+            "name": "updateOperator",
+            "nodeType": "VariableDeclaration",
+            "scope": 6329,
+            "src": "529:50:27",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+              "typeString": "mapping(uint256 => address)"
+            },
+            "typeName": {
+              "id": 6309,
+              "keyType": {
+                "id": 6307,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "538:7:27",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "529:28:27",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+                "typeString": "mapping(uint256 => address)"
+              },
+              "valueType": {
+                "id": 6308,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "549:7:27",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6312,
+            "name": "estateRegistry",
+            "nodeType": "VariableDeclaration",
+            "scope": 6329,
+            "src": "586:37:27",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IEstateRegistry_$4409",
+              "typeString": "contract IEstateRegistry"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 6311,
+              "name": "IEstateRegistry",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4409,
+              "src": "586:15:27",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IEstateRegistry_$4409",
+                "typeString": "contract IEstateRegistry"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6316,
+            "name": "authorizedDeploy",
+            "nodeType": "VariableDeclaration",
+            "scope": 6329,
+            "src": "630:49:27",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 6315,
+              "keyType": {
+                "id": 6313,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "639:7:27",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "630:25:27",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 6314,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "650:4:27",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6322,
+            "name": "updateManager",
+            "nodeType": "VariableDeclaration",
+            "scope": 6329,
+            "src": "686:65:27",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_bool_$_$",
+              "typeString": "mapping(address => mapping(address => bool))"
+            },
+            "typeName": {
+              "id": 6321,
+              "keyType": {
+                "id": 6317,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "694:7:27",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "686:44:27",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_bool_$_$",
+                "typeString": "mapping(address => mapping(address => bool))"
+              },
+              "valueType": {
+                "id": 6320,
+                "keyType": {
+                  "id": 6318,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "713:7:27",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "705:24:27",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                  "typeString": "mapping(address => bool)"
+                },
+                "valueType": {
+                  "id": 6319,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "724:4:27",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6324,
+            "name": "landBalance",
+            "nodeType": "VariableDeclaration",
+            "scope": 6329,
+            "src": "790:31:27",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IMiniMeToken_$6378",
+              "typeString": "contract IMiniMeToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 6323,
+              "name": "IMiniMeToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 6378,
+              "src": "790:12:27",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IMiniMeToken_$6378",
+                "typeString": "contract IMiniMeToken"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 6328,
+            "name": "registeredBalance",
+            "nodeType": "VariableDeclaration",
+            "scope": 6329,
+            "src": "862:49:27",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 6327,
+              "keyType": {
+                "id": 6325,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "870:7:27",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "862:24:27",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 6326,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "881:4:27",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 6330,
+        "src": "116:799:27"
+      }
+    ],
+    "src": "0:917:27"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/land/LANDStorage.sol",
+      "exportedSymbols": {
+        "LANDStorage": [
+          6329
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".23"
+          ]
+        },
+        "id": 6287,
+        "name": "PragmaDirective",
+        "src": "0:24:27"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 4410,
+          "absolutePath": "project:/contracts/estate/IEstateRegistry.sol",
+          "file": "../estate/IEstateRegistry.sol",
+          "scope": 6330,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 6288,
+        "name": "ImportDirective",
+        "src": "28:39:27"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 6379,
+          "absolutePath": "project:/contracts/minimeToken/IMinimeToken.sol",
+          "file": "../minimeToken/IMinimeToken.sol",
+          "scope": 6330,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 6289,
+        "name": "ImportDirective",
+        "src": "69:41:27"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            6329
+          ],
+          "name": "LANDStorage",
+          "scope": 6330
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "latestPing",
+              "scope": 6329,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => uint256)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => uint256)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 6290,
+                    "name": "ElementaryTypeName",
+                    "src": "151:7:27"
+                  },
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 6291,
+                    "name": "ElementaryTypeName",
+                    "src": "162:4:27"
+                  }
+                ],
+                "id": 6292,
+                "name": "Mapping",
+                "src": "142:25:27"
+              }
+            ],
+            "id": 6293,
+            "name": "VariableDeclaration",
+            "src": "142:43:27"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "name": "clearLow",
+              "scope": 6329,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 6294,
+                "name": "ElementaryTypeName",
+                "src": "192:7:27"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "307866666666666666666666666666666666666666666666666666666666666666663030303030303030303030303030303030303030303030303030303030303030",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 1157...(70 digits omitted)...8480",
+                  "value": "0xffffffffffffffffffffffffffffffff00000000000000000000000000000000"
+                },
+                "id": 6295,
+                "name": "Literal",
+                "src": "220:66:27"
+              }
+            ],
+            "id": 6296,
+            "name": "VariableDeclaration",
+            "src": "192:94:27"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "name": "clearHigh",
+              "scope": 6329,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 6297,
+                "name": "ElementaryTypeName",
+                "src": "291:7:27"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "307830303030303030303030303030303030303030303030303030303030303030306666666666666666666666666666666666666666666666666666666666666666",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 3402...(31 digits omitted)...1455",
+                  "value": "0x00000000000000000000000000000000ffffffffffffffffffffffffffffffff"
+                },
+                "id": 6298,
+                "name": "Literal",
+                "src": "320:66:27"
+              }
+            ],
+            "id": 6299,
+            "name": "VariableDeclaration",
+            "src": "291:95:27"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "name": "factor",
+              "scope": 6329,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 6300,
+                "name": "ElementaryTypeName",
+                "src": "391:7:27"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "3078313030303030303030303030303030303030303030303030303030303030303030",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 3402...(31 digits omitted)...1456",
+                  "value": "0x100000000000000000000000000000000"
+                },
+                "id": 6301,
+                "name": "Literal",
+                "src": "417:35:27"
+              }
+            ],
+            "id": 6302,
+            "name": "VariableDeclaration",
+            "src": "391:61:27"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "_deprecated_authorizedDeploy",
+              "scope": 6329,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => bool)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => bool)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 6303,
+                    "name": "ElementaryTypeName",
+                    "src": "468:7:27"
+                  },
+                  {
+                    "attributes": {
+                      "name": "bool",
+                      "type": "bool"
+                    },
+                    "id": 6304,
+                    "name": "ElementaryTypeName",
+                    "src": "479:4:27"
+                  }
+                ],
+                "id": 6305,
+                "name": "Mapping",
+                "src": "459:25:27"
+              }
+            ],
+            "id": 6306,
+            "name": "VariableDeclaration",
+            "src": "459:63:27"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "updateOperator",
+              "scope": 6329,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => address)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => address)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 6307,
+                    "name": "ElementaryTypeName",
+                    "src": "538:7:27"
+                  },
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 6308,
+                    "name": "ElementaryTypeName",
+                    "src": "549:7:27"
+                  }
+                ],
+                "id": 6309,
+                "name": "Mapping",
+                "src": "529:28:27"
+              }
+            ],
+            "id": 6310,
+            "name": "VariableDeclaration",
+            "src": "529:50:27"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "estateRegistry",
+              "scope": 6329,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "contract IEstateRegistry",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "IEstateRegistry",
+                  "referencedDeclaration": 4409,
+                  "type": "contract IEstateRegistry"
+                },
+                "id": 6311,
+                "name": "UserDefinedTypeName",
+                "src": "586:15:27"
+              }
+            ],
+            "id": 6312,
+            "name": "VariableDeclaration",
+            "src": "586:37:27"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "authorizedDeploy",
+              "scope": 6329,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => bool)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => bool)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 6313,
+                    "name": "ElementaryTypeName",
+                    "src": "639:7:27"
+                  },
+                  {
+                    "attributes": {
+                      "name": "bool",
+                      "type": "bool"
+                    },
+                    "id": 6314,
+                    "name": "ElementaryTypeName",
+                    "src": "650:4:27"
+                  }
+                ],
+                "id": 6315,
+                "name": "Mapping",
+                "src": "630:25:27"
+              }
+            ],
+            "id": 6316,
+            "name": "VariableDeclaration",
+            "src": "630:49:27"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "updateManager",
+              "scope": 6329,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => mapping(address => bool))",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => mapping(address => bool))"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 6317,
+                    "name": "ElementaryTypeName",
+                    "src": "694:7:27"
+                  },
+                  {
+                    "attributes": {
+                      "type": "mapping(address => bool)"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 6318,
+                        "name": "ElementaryTypeName",
+                        "src": "713:7:27"
+                      },
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 6319,
+                        "name": "ElementaryTypeName",
+                        "src": "724:4:27"
+                      }
+                    ],
+                    "id": 6320,
+                    "name": "Mapping",
+                    "src": "705:24:27"
+                  }
+                ],
+                "id": 6321,
+                "name": "Mapping",
+                "src": "686:44:27"
+              }
+            ],
+            "id": 6322,
+            "name": "VariableDeclaration",
+            "src": "686:65:27"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "landBalance",
+              "scope": 6329,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "contract IMiniMeToken",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "IMiniMeToken",
+                  "referencedDeclaration": 6378,
+                  "type": "contract IMiniMeToken"
+                },
+                "id": 6323,
+                "name": "UserDefinedTypeName",
+                "src": "790:12:27"
+              }
+            ],
+            "id": 6324,
+            "name": "VariableDeclaration",
+            "src": "790:31:27"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "registeredBalance",
+              "scope": 6329,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => bool)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => bool)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 6325,
+                    "name": "ElementaryTypeName",
+                    "src": "870:7:27"
+                  },
+                  {
+                    "attributes": {
+                      "name": "bool",
+                      "type": "bool"
+                    },
+                    "id": 6326,
+                    "name": "ElementaryTypeName",
+                    "src": "881:4:27"
+                  }
+                ],
+                "id": 6327,
+                "name": "Mapping",
+                "src": "862:24:27"
+              }
+            ],
+            "id": 6328,
+            "name": "VariableDeclaration",
+            "src": "862:49:27"
+          }
+        ],
+        "id": 6329,
+        "name": "ContractDefinition",
+        "src": "116:799:27"
+      }
+    ],
+    "id": 6330,
+    "name": "SourceUnit",
+    "src": "0:917:27"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-02-03T17:24:10.831Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

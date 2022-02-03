@@ -15,23 +15,30 @@ const createInfuraProvider = (network = 'ropsten') =>
   )
 
 module.exports = {
+  compilers: {
   solc: {
+    version : "0.4.18",
+    version : "0.4.21",
+    version : "0.4.23",
+    version : "0.4.24",
     optimizer: {
       enabled: true,
       runs: 200
     }
+  }
   },
   networks: {
     livenet: {
       host: 'localhost',
       port: 8545,
-      gas: 70000000,
+      gas: 7000000,
       network_id: '*'
     },
     development: {
       host: 'localhost',
-      port: 18545,
-      gas: 100000000,
+      port: 8545,
+      gas: 20000000000,
+      gasPrice:6721975 ,
       network_id: '*'
     },
     ropsten: {

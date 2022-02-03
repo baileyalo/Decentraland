@@ -16,6 +16,8 @@
     "babel-polyfill": "^6.26.0",
     "babel-register": "^6.26.0",
     "dotenv": "^16.0.0",
+    "erc821": "^5.3.0",
+    "openzeppelin-zos": "^1.9.4",
     "truffle-hdwallet-provider": "^1.0.17"
   }
 }

@@ -1,0 +1,1048 @@
+{
+  "contractName": "IMiniMeToken",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "generateTokens",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "destroyTokens",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.24;\r\n\r\n\r\ninterface IMiniMeToken {\r\n////////////////\r\n// Generate and destroy tokens\r\n////////////////\r\n\r\n    /// @notice Generates `_amount` tokens that are assigned to `_owner`\r\n    /// @param _owner The address that will be assigned the new tokens\r\n    /// @param _amount The quantity of tokens generated\r\n    /// @return True if the tokens are generated correctly\r\n    function generateTokens(address _owner, uint _amount) external returns (bool);\r\n\r\n\r\n    /// @notice Burns `_amount` tokens from `_owner`\r\n    /// @param _owner The address that will lose the tokens\r\n    /// @param _amount The quantity of tokens to burn\r\n    /// @return True if the tokens are burned correctly\r\n    function destroyTokens(address _owner, uint _amount) external returns (bool);\r\n\r\n    /// @param _owner The address that's balance is being requested\r\n    /// @return The balance of `_owner` at the current block\r\n    function balanceOf(address _owner) external view returns (uint256 balance);\r\n\r\n    event Transfer(address indexed _from, address indexed _to, uint256 _amount);\r\n}",
+  "sourcePath": "B:\\Block Chain Development\\Advanced Blockchain Technology\\Decentraland\\Truffle\\contracts\\minimeToken\\IMinimeToken.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/minimeToken/IMinimeToken.sol",
+    "exportedSymbols": {
+      "IMiniMeToken": [
+        6378
+      ]
+    },
+    "id": 6379,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6344,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:29"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 6378,
+        "linearizedBaseContracts": [
+          6378
+        ],
+        "name": "IMiniMeToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "/////////////\r\n @notice Generates `_amount` tokens that are assigned to `_owner`\r\n @param _owner The address that will be assigned the new tokens\r\n @param _amount The quantity of tokens generated\r\n @return True if the tokens are generated correctly\r",
+            "id": 6353,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "generateTokens",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6349,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6346,
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6353,
+                  "src": "417:14:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6345,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "417:7:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6348,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6353,
+                  "src": "433:12:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6347,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "433:4:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "416:30:29"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6352,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6351,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6353,
+                  "src": "465:4:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 6350,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "465:4:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "464:6:29"
+            },
+            "scope": 6378,
+            "src": "393:78:29",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Burns `_amount` tokens from `_owner`\r\n @param _owner The address that will lose the tokens\r\n @param _amount The quantity of tokens to burn\r\n @return True if the tokens are burned correctly\r",
+            "id": 6362,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "destroyTokens",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6358,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6355,
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6362,
+                  "src": "731:14:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6354,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "731:7:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6357,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6362,
+                  "src": "747:12:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6356,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "747:4:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "730:30:29"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6361,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6360,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6362,
+                  "src": "779:4:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 6359,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "779:4:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "778:6:29"
+            },
+            "scope": 6378,
+            "src": "708:77:29",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@param _owner The address that's balance is being requested\r\n @return The balance of `_owner` at the current block\r",
+            "id": 6369,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "balanceOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6365,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6364,
+                  "name": "_owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6369,
+                  "src": "943:14:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6363,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "943:7:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "942:16:29"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6368,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6367,
+                  "name": "balance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6369,
+                  "src": "982:15:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6366,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "982:7:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "981:17:29"
+            },
+            "scope": 6378,
+            "src": "924:75:29",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 6377,
+            "name": "Transfer",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 6376,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6371,
+                  "indexed": true,
+                  "name": "_from",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6377,
+                  "src": "1022:21:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6370,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1022:7:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6373,
+                  "indexed": true,
+                  "name": "_to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6377,
+                  "src": "1045:19:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6372,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1045:7:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6375,
+                  "indexed": false,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6377,
+                  "src": "1066:15:29",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6374,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1066:7:29",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1021:61:29"
+            },
+            "src": "1007:76:29"
+          }
+        ],
+        "scope": 6379,
+        "src": "30:1056:29"
+      }
+    ],
+    "src": "0:1086:29"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/minimeToken/IMinimeToken.sol",
+      "exportedSymbols": {
+        "IMiniMeToken": [
+          6378
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".24"
+          ]
+        },
+        "id": 6344,
+        "name": "PragmaDirective",
+        "src": "0:24:29"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            6378
+          ],
+          "name": "IMiniMeToken",
+          "scope": 6379
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "documentation": "/////////////\r\n @notice Generates `_amount` tokens that are assigned to `_owner`\r\n @param _owner The address that will be assigned the new tokens\r\n @param _amount The quantity of tokens generated\r\n @return True if the tokens are generated correctly\r",
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "generateTokens",
+              "payable": false,
+              "scope": 6378,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_owner",
+                      "scope": 6353,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 6345,
+                        "name": "ElementaryTypeName",
+                        "src": "417:7:29"
+                      }
+                    ],
+                    "id": 6346,
+                    "name": "VariableDeclaration",
+                    "src": "417:14:29"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_amount",
+                      "scope": 6353,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 6347,
+                        "name": "ElementaryTypeName",
+                        "src": "433:4:29"
+                      }
+                    ],
+                    "id": 6348,
+                    "name": "VariableDeclaration",
+                    "src": "433:12:29"
+                  }
+                ],
+                "id": 6349,
+                "name": "ParameterList",
+                "src": "416:30:29"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 6353,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 6350,
+                        "name": "ElementaryTypeName",
+                        "src": "465:4:29"
+                      }
+                    ],
+                    "id": 6351,
+                    "name": "VariableDeclaration",
+                    "src": "465:4:29"
+                  }
+                ],
+                "id": 6352,
+                "name": "ParameterList",
+                "src": "464:6:29"
+              }
+            ],
+            "id": 6353,
+            "name": "FunctionDefinition",
+            "src": "393:78:29"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "documentation": "@notice Burns `_amount` tokens from `_owner`\r\n @param _owner The address that will lose the tokens\r\n @param _amount The quantity of tokens to burn\r\n @return True if the tokens are burned correctly\r",
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "destroyTokens",
+              "payable": false,
+              "scope": 6378,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_owner",
+                      "scope": 6362,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 6354,
+                        "name": "ElementaryTypeName",
+                        "src": "731:7:29"
+                      }
+                    ],
+                    "id": 6355,
+                    "name": "VariableDeclaration",
+                    "src": "731:14:29"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_amount",
+                      "scope": 6362,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 6356,
+                        "name": "ElementaryTypeName",
+                        "src": "747:4:29"
+                      }
+                    ],
+                    "id": 6357,
+                    "name": "VariableDeclaration",
+                    "src": "747:12:29"
+                  }
+                ],
+                "id": 6358,
+                "name": "ParameterList",
+                "src": "730:30:29"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 6362,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 6359,
+                        "name": "ElementaryTypeName",
+                        "src": "779:4:29"
+                      }
+                    ],
+                    "id": 6360,
+                    "name": "VariableDeclaration",
+                    "src": "779:4:29"
+                  }
+                ],
+                "id": 6361,
+                "name": "ParameterList",
+                "src": "778:6:29"
+              }
+            ],
+            "id": 6362,
+            "name": "FunctionDefinition",
+            "src": "708:77:29"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": true,
+              "documentation": "@param _owner The address that's balance is being requested\r\n @return The balance of `_owner` at the current block\r",
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "balanceOf",
+              "payable": false,
+              "scope": 6378,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_owner",
+                      "scope": 6369,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 6363,
+                        "name": "ElementaryTypeName",
+                        "src": "943:7:29"
+                      }
+                    ],
+                    "id": 6364,
+                    "name": "VariableDeclaration",
+                    "src": "943:14:29"
+                  }
+                ],
+                "id": 6365,
+                "name": "ParameterList",
+                "src": "942:16:29"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "balance",
+                      "scope": 6369,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 6366,
+                        "name": "ElementaryTypeName",
+                        "src": "982:7:29"
+                      }
+                    ],
+                    "id": 6367,
+                    "name": "VariableDeclaration",
+                    "src": "982:15:29"
+                  }
+                ],
+                "id": 6368,
+                "name": "ParameterList",
+                "src": "981:17:29"
+              }
+            ],
+            "id": 6369,
+            "name": "FunctionDefinition",
+            "src": "924:75:29"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "Transfer"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_from",
+                      "scope": 6377,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 6370,
+                        "name": "ElementaryTypeName",
+                        "src": "1022:7:29"
+                      }
+                    ],
+                    "id": 6371,
+                    "name": "VariableDeclaration",
+                    "src": "1022:21:29"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "_to",
+                      "scope": 6377,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 6372,
+                        "name": "ElementaryTypeName",
+                        "src": "1045:7:29"
+                      }
+                    ],
+                    "id": 6373,
+                    "name": "VariableDeclaration",
+                    "src": "1045:19:29"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "_amount",
+                      "scope": 6377,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 6374,
+                        "name": "ElementaryTypeName",
+                        "src": "1066:7:29"
+                      }
+                    ],
+                    "id": 6375,
+                    "name": "VariableDeclaration",
+                    "src": "1066:15:29"
+                  }
+                ],
+                "id": 6376,
+                "name": "ParameterList",
+                "src": "1021:61:29"
+              }
+            ],
+            "id": 6377,
+            "name": "EventDefinition",
+            "src": "1007:76:29"
+          }
+        ],
+        "id": 6378,
+        "name": "ContractDefinition",
+        "src": "30:1056:29"
+      }
+    ],
+    "id": 6379,
+    "name": "SourceUnit",
+    "src": "0:1086:29"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-02-03T17:24:10.833Z",
+  "devdoc": {
+    "methods": {
+      "balanceOf(address)": {
+        "params": {
+          "_owner": "The address that's balance is being requested\r"
+        },
+        "return": "The balance of `_owner` at the current block\r"
+      },
+      "destroyTokens(address,uint256)": {
+        "params": {
+          "_amount": "The quantity of tokens to burn\r",
+          "_owner": "The address that will lose the tokens\r"
+        },
+        "return": "True if the tokens are burned correctly\r"
+      },
+      "generateTokens(address,uint256)": {
+        "params": {
+          "_amount": "The quantity of tokens generated\r",
+          "_owner": "The address that will be assigned the new tokens\r"
+        },
+        "return": "True if the tokens are generated correctly\r"
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "destroyTokens(address,uint256)": {
+        "notice": "Burns `_amount` tokens from `_owner`\r"
+      },
+      "generateTokens(address,uint256)": {
+        "notice": "/////////////\rGenerates `_amount` tokens that are assigned to `_owner`\r"
+      }
+    }
+  }
+}

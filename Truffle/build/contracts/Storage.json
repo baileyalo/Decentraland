@@ -1,0 +1,562 @@
+{
+  "contractName": "Storage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "proxyOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "updateManager",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "latestPing",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "authorizedDeploy",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "registeredBalance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "currentContract",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "landBalance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "updateOperator",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "estateRegistry",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.24+commit.e67f0147\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"proxyOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"address\"}],\"name\":\"updateManager\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"latestPing\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"authorizedDeploy\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"registeredBalance\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"currentContract\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"landBalance\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"updateOperator\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"estateRegistry\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Storage.sol\":\"Storage\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"erc821/contracts/AssetRegistryStorage.sol\":{\"keccak256\":\"0xbf8b47bfc7fa01262e2b6cc95bfdff4cc2374a6012feccda9c4b9ede2a4cfcbc\",\"urls\":[\"bzzr://a864731b246010c75056fa8f0be9b386cf9d18b7429757b68dab5d17f045a3bb\"]},\"project:/contracts/Storage.sol\":{\"keccak256\":\"0x586082d69e6539bbbc088ac224530e96d60754e98ec963d1ebe5bd310af1fc8d\",\"urls\":[\"bzzr://9d52b04aa364f542466e28b4ca40137776a9afacd35a663c92f6f6e81216a410\"]},\"project:/contracts/estate/IEstateRegistry.sol\":{\"keccak256\":\"0x254d0d9d95e0c3ee994fe717a7eaeaa7efa12d4a212da0f04a0371c31f1004c7\",\"urls\":[\"bzzr://79cbc02dcb62de1ef522a134cda383af15acf39357eef859e53b721da1a29c9b\"]},\"project:/contracts/land/LANDStorage.sol\":{\"keccak256\":\"0xb855cffb691cc713846247d34b6e1e2b249992afc732b7b38bed710889d0cd59\",\"urls\":[\"bzzr://792cce5dd5ab46c205a5ae68cf5e6a3645af22276dd582e72a91574fbe56a4f9\"]},\"project:/contracts/minimeToken/IMinimeToken.sol\":{\"keccak256\":\"0x85d386d9a75d3d2b4d8f81875f031f41e84fb18f8aa3dca718078e9e192b0712\",\"urls\":[\"bzzr://2ffaac2488ec7abcb072d124f0ca5e3d0dc81df418fb88d62b045d5794cbbf28\"]},\"project:/contracts/upgradable/OwnableStorage.sol\":{\"keccak256\":\"0xf3eba8a6ca914a6a6aaddf43aef6d63e97e118a0f91cb337c7b7ffa5a1cf3c91\",\"urls\":[\"bzzr://0cc7b72c59e82b28a9f7105272bdd69dd6ec93af350a990f4df6bec19ef30b2e\"]},\"project:/contracts/upgradable/ProxyStorage.sol\":{\"keccak256\":\"0x6a6cacb9300c106e9e8cc7bd27e18c3edcedc27e9eb9226798457fd2fdcd54fb\",\"urls\":[\"bzzr://f91cbf4dbac59e7e8a201afb418e6ba3e8f4e74546226954f7d8c529194f1f6f\"]}},\"version\":1}",
+  "bytecode": "0x608060405233600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506105f4806100546000396000f3006080604052600436106100a4576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063025313a2146100a957806307ecec3e146101005780631e3759011461017b57806329ffab3b146101d25780636087de1b1461022d578063721d7d8e1461028857806384b80004146102df5780638da5cb5b146103365780639d40b8501461038d578063e387d31a146103fa575b600080fd5b3480156100b557600080fd5b506100be610451565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561010c57600080fd5b50610161600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610477565b604051808215151515815260200191505060405180910390f35b34801561018757600080fd5b506101bc600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104a6565b6040518082815260200191505060405180910390f35b3480156101de57600080fd5b50610213600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104be565b604051808215151515815260200191505060405180910390f35b34801561023957600080fd5b5061026e600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104de565b604051808215151515815260200191505060405180910390f35b34801561029457600080fd5b5061029d6104fe565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156102eb57600080fd5b506102f4610523565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561034257600080fd5b5061034b610549565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561039957600080fd5b506103b86004803603810190808035906020019092919050505061056f565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561040657600080fd5b5061040f6105a2565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60126020528160005260406000206020528060005260406000206000915091509054906101000a900460ff1681565b600d6020528060005260406000206000915090505481565b60116020528060005260406000206000915054906101000a900460ff1681565b60146020528060005260406000206000915054906101000a900460ff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b601360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600f6020528060005260406000206000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b601060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a723058204699408deb39f274f0c7873466a9b683fcf6a91c0939c434f8637082ea9c233c0029",
+  "deployedBytecode": "0x6080604052600436106100a4576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063025313a2146100a957806307ecec3e146101005780631e3759011461017b57806329ffab3b146101d25780636087de1b1461022d578063721d7d8e1461028857806384b80004146102df5780638da5cb5b146103365780639d40b8501461038d578063e387d31a146103fa575b600080fd5b3480156100b557600080fd5b506100be610451565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561010c57600080fd5b50610161600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610477565b604051808215151515815260200191505060405180910390f35b34801561018757600080fd5b506101bc600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104a6565b6040518082815260200191505060405180910390f35b3480156101de57600080fd5b50610213600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104be565b604051808215151515815260200191505060405180910390f35b34801561023957600080fd5b5061026e600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506104de565b604051808215151515815260200191505060405180910390f35b34801561029457600080fd5b5061029d6104fe565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156102eb57600080fd5b506102f4610523565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561034257600080fd5b5061034b610549565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561039957600080fd5b506103b86004803603810190808035906020019092919050505061056f565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561040657600080fd5b5061040f6105a2565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60126020528160005260406000206020528060005260406000206000915091509054906101000a900460ff1681565b600d6020528060005260406000206000915090505481565b60116020528060005260406000206000915054906101000a900460ff1681565b60146020528060005260406000206000915054906101000a900460ff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b601360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600f6020528060005260406000206000915054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b601060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a723058204699408deb39f274f0c7873466a9b683fcf6a91c0939c434f8637082ea9c233c0029",
+  "sourceMap": "209:88:21:-;;;126:10:36;118:5;;:18;;;;;;;;;;;;;;;;;;209:88:21;;;;;;",
+  "deployedSourceMap": "209:88:21:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;155:25:38;;8:9:-1;5:2;;;30:1;27;20:12;5:2;155:25:38;;;;;;;;;;;;;;;;;;;;;;;;;;;686:65:27;;8:9:-1;5:2;;;30:1;27;20:12;5:2;686:65:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;142:43;;8:9:-1;5:2;;;30:1;27;20:12;5:2;142:43:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;630:49;;8:9:-1;5:2;;;30:1;27;20:12;5:2;630:49:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;862;;8:9:-1;5:2;;;30:1;27;20:12;5:2;862:49:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;120:30:38;;8:9:-1;5:2;;;30:1;27;20:12;5:2;120:30:38;;;;;;;;;;;;;;;;;;;;;;;;;;;790:31:27;;8:9:-1;5:2;;;30:1;27;20:12;5:2;790:31:27;;;;;;;;;;;;;;;;;;;;;;;;;;;61:20:36;;8:9:-1;5:2;;;30:1;27;20:12;5:2;61:20:36;;;;;;;;;;;;;;;;;;;;;;;;;;;529:50:27;;8:9:-1;5:2;;;30:1;27;20:12;5:2;529:50:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;586:37;;8:9:-1;5:2;;;30:1;27;20:12;5:2;586:37:27;;;;;;;;;;;;;;;;;;;;;;;;;;;155:25:38;;;;;;;;;;;;;:::o;686:65:27:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;142:43::-;;;;;;;;;;;;;;;;;:::o;630:49::-;;;;;;;;;;;;;;;;;;;;;;:::o;862:::-;;;;;;;;;;;;;;;;;;;;;;:::o;120:30:38:-;;;;;;;;;;;;;:::o;790:31:27:-;;;;;;;;;;;;;:::o;61:20:36:-;;;;;;;;;;;;;:::o;529:50:27:-;;;;;;;;;;;;;;;;;;;;;;:::o;586:37::-;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.18;\r\n\r\nimport \"./upgradable/ProxyStorage.sol\";\r\n\r\nimport \"./upgradable/OwnableStorage.sol\";\r\n\r\nimport \"erc821/contracts/AssetRegistryStorage.sol\";\r\n\r\nimport \"./land/LANDStorage.sol\";\r\n\r\n\r\ncontract Storage is ProxyStorage, OwnableStorage, AssetRegistryStorage, LANDStorage {\r\n}\r\n",
+  "sourcePath": "B:\\Block Chain Development\\Advanced Blockchain Technology\\Decentraland\\Truffle\\contracts\\Storage.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Storage.sol",
+    "exportedSymbols": {
+      "Storage": [
+        2778
+      ]
+    },
+    "id": 2779,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2765,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:21"
+      },
+      {
+        "absolutePath": "project:/contracts/upgradable/ProxyStorage.sol",
+        "file": "./upgradable/ProxyStorage.sol",
+        "id": 2766,
+        "nodeType": "ImportDirective",
+        "scope": 2779,
+        "sourceUnit": 7782,
+        "src": "28:39:21",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/upgradable/OwnableStorage.sol",
+        "file": "./upgradable/OwnableStorage.sol",
+        "id": 2767,
+        "nodeType": "ImportDirective",
+        "scope": 2779,
+        "sourceUnit": 7653,
+        "src": "71:41:21",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "erc821/contracts/AssetRegistryStorage.sol",
+        "file": "erc821/contracts/AssetRegistryStorage.sol",
+        "id": 2768,
+        "nodeType": "ImportDirective",
+        "scope": 2779,
+        "sourceUnit": 38,
+        "src": "116:51:21",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/land/LANDStorage.sol",
+        "file": "./land/LANDStorage.sol",
+        "id": 2769,
+        "nodeType": "ImportDirective",
+        "scope": 2779,
+        "sourceUnit": 6330,
+        "src": "171:32:21",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2770,
+              "name": "ProxyStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 7781,
+              "src": "229:12:21",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ProxyStorage_$7781",
+                "typeString": "contract ProxyStorage"
+              }
+            },
+            "id": 2771,
+            "nodeType": "InheritanceSpecifier",
+            "src": "229:12:21"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2772,
+              "name": "OwnableStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 7652,
+              "src": "243:14:21",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_OwnableStorage_$7652",
+                "typeString": "contract OwnableStorage"
+              }
+            },
+            "id": 2773,
+            "nodeType": "InheritanceSpecifier",
+            "src": "243:14:21"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2774,
+              "name": "AssetRegistryStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 37,
+              "src": "259:20:21",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_AssetRegistryStorage_$37",
+                "typeString": "contract AssetRegistryStorage"
+              }
+            },
+            "id": 2775,
+            "nodeType": "InheritanceSpecifier",
+            "src": "259:20:21"
+          },
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2776,
+              "name": "LANDStorage",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 6329,
+              "src": "281:11:21",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_LANDStorage_$6329",
+                "typeString": "contract LANDStorage"
+              }
+            },
+            "id": 2777,
+            "nodeType": "InheritanceSpecifier",
+            "src": "281:11:21"
+          }
+        ],
+        "contractDependencies": [
+          37,
+          6329,
+          7652,
+          7781
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2778,
+        "linearizedBaseContracts": [
+          2778,
+          6329,
+          37,
+          7652,
+          7781
+        ],
+        "name": "Storage",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 2779,
+        "src": "209:88:21"
+      }
+    ],
+    "src": "0:299:21"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/Storage.sol",
+      "exportedSymbols": {
+        "Storage": [
+          2778
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 2765,
+        "name": "PragmaDirective",
+        "src": "0:24:21"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 7782,
+          "absolutePath": "project:/contracts/upgradable/ProxyStorage.sol",
+          "file": "./upgradable/ProxyStorage.sol",
+          "scope": 2779,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 2766,
+        "name": "ImportDirective",
+        "src": "28:39:21"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 7653,
+          "absolutePath": "project:/contracts/upgradable/OwnableStorage.sol",
+          "file": "./upgradable/OwnableStorage.sol",
+          "scope": 2779,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 2767,
+        "name": "ImportDirective",
+        "src": "71:41:21"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 38,
+          "absolutePath": "erc821/contracts/AssetRegistryStorage.sol",
+          "file": "erc821/contracts/AssetRegistryStorage.sol",
+          "scope": 2779,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 2768,
+        "name": "ImportDirective",
+        "src": "116:51:21"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 6330,
+          "absolutePath": "project:/contracts/land/LANDStorage.sol",
+          "file": "./land/LANDStorage.sol",
+          "scope": 2779,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 2769,
+        "name": "ImportDirective",
+        "src": "171:32:21"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            37,
+            6329,
+            7652,
+            7781
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            2778,
+            6329,
+            37,
+            7652,
+            7781
+          ],
+          "name": "Storage",
+          "nodes": [
+            null
+          ],
+          "scope": 2779
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "ProxyStorage",
+                  "referencedDeclaration": 7781,
+                  "type": "contract ProxyStorage"
+                },
+                "id": 2770,
+                "name": "UserDefinedTypeName",
+                "src": "229:12:21"
+              }
+            ],
+            "id": 2771,
+            "name": "InheritanceSpecifier",
+            "src": "229:12:21"
+          },
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "OwnableStorage",
+                  "referencedDeclaration": 7652,
+                  "type": "contract OwnableStorage"
+                },
+                "id": 2772,
+                "name": "UserDefinedTypeName",
+                "src": "243:14:21"
+              }
+            ],
+            "id": 2773,
+            "name": "InheritanceSpecifier",
+            "src": "243:14:21"
+          },
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "AssetRegistryStorage",
+                  "referencedDeclaration": 37,
+                  "type": "contract AssetRegistryStorage"
+                },
+                "id": 2774,
+                "name": "UserDefinedTypeName",
+                "src": "259:20:21"
+              }
+            ],
+            "id": 2775,
+            "name": "InheritanceSpecifier",
+            "src": "259:20:21"
+          },
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "LANDStorage",
+                  "referencedDeclaration": 6329,
+                  "type": "contract LANDStorage"
+                },
+                "id": 2776,
+                "name": "UserDefinedTypeName",
+                "src": "281:11:21"
+              }
+            ],
+            "id": 2777,
+            "name": "InheritanceSpecifier",
+            "src": "281:11:21"
+          }
+        ],
+        "id": 2778,
+        "name": "ContractDefinition",
+        "src": "209:88:21"
+      }
+    ],
+    "id": 2779,
+    "name": "SourceUnit",
+    "src": "0:299:21"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-02-03T17:24:10.795Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

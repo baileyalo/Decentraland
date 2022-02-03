@@ -1,0 +1,249 @@
+{
+  "contractName": "ProxyStorage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "proxyOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "currentContract",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.24+commit.e67f0147\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"proxyOwner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"currentContract\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/upgradable/ProxyStorage.sol\":\"ProxyStorage\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/upgradable/ProxyStorage.sol\":{\"keccak256\":\"0x6a6cacb9300c106e9e8cc7bd27e18c3edcedc27e9eb9226798457fd2fdcd54fb\",\"urls\":[\"bzzr://f91cbf4dbac59e7e8a201afb418e6ba3e8f4e74546226954f7d8c529194f1f6f\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610176806100206000396000f30060806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063025313a214610051578063721d7d8e146100a8575b600080fd5b34801561005d57600080fd5b506100666100ff565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100b457600080fd5b506100bd610125565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a7230582023d5c4372981dd9a56727c000ef30fd0780566f4478a46c83af0a32216ef876c0029",
+  "deployedBytecode": "0x60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063025313a214610051578063721d7d8e146100a8575b600080fd5b34801561005d57600080fd5b506100666100ff565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156100b457600080fd5b506100bd610125565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff16815600a165627a7a7230582023d5c4372981dd9a56727c000ef30fd0780566f4478a46c83af0a32216ef876c0029",
+  "sourceMap": "30:154:38:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;30:154:38;;;;;;;",
+  "deployedSourceMap": "30:154:38:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;155:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;155:25:38;;;;;;;;;;;;;;;;;;;;;;;;;;;120:30;;8:9:-1;5:2;;;30:1;27;20:12;5:2;120:30:38;;;;;;;;;;;;;;;;;;;;;;;;;;;155:25;;;;;;;;;;;;;:::o;120:30::-;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.18;\r\n\r\n\r\ncontract ProxyStorage {\r\n\r\n  /**\r\n   * Current contract to which we are proxing\r\n   */\r\n  address public currentContract;\r\n  address public proxyOwner;\r\n}\r\n",
+  "sourcePath": "B:\\Block Chain Development\\Advanced Blockchain Technology\\Decentraland\\Truffle\\contracts\\upgradable\\ProxyStorage.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/upgradable/ProxyStorage.sol",
+    "exportedSymbols": {
+      "ProxyStorage": [
+        7781
+      ]
+    },
+    "id": 7782,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7776,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:38"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 7781,
+        "linearizedBaseContracts": [
+          7781
+        ],
+        "name": "ProxyStorage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7778,
+            "name": "currentContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 7781,
+            "src": "120:30:38",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 7777,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "120:7:38",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7780,
+            "name": "proxyOwner",
+            "nodeType": "VariableDeclaration",
+            "scope": 7781,
+            "src": "155:25:38",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 7779,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "155:7:38",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7782,
+        "src": "30:154:38"
+      }
+    ],
+    "src": "0:186:38"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/upgradable/ProxyStorage.sol",
+      "exportedSymbols": {
+        "ProxyStorage": [
+          7781
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 7776,
+        "name": "PragmaDirective",
+        "src": "0:24:38"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            7781
+          ],
+          "name": "ProxyStorage",
+          "scope": 7782
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "currentContract",
+              "scope": 7781,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "type": "address"
+                },
+                "id": 7777,
+                "name": "ElementaryTypeName",
+                "src": "120:7:38"
+              }
+            ],
+            "id": 7778,
+            "name": "VariableDeclaration",
+            "src": "120:30:38"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "proxyOwner",
+              "scope": 7781,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "type": "address"
+                },
+                "id": 7779,
+                "name": "ElementaryTypeName",
+                "src": "155:7:38"
+              }
+            ],
+            "id": 7780,
+            "name": "VariableDeclaration",
+            "src": "155:25:38"
+          }
+        ],
+        "id": 7781,
+        "name": "ContractDefinition",
+        "src": "30:154:38"
+      }
+    ],
+    "id": 7782,
+    "name": "SourceUnit",
+    "src": "0:186:38"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-02-03T17:24:10.888Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

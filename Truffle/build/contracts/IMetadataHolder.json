@@ -1,0 +1,394 @@
+{
+  "contractName": "IMetadataHolder",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "interfaceID",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "getMetadata",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.22;\r\n\r\nimport \"erc821/contracts/ERC165.sol\";\r\n\r\n\r\ncontract IMetadataHolder is ERC165 {\r\n  function getMetadata(uint256 /* assetId */) external view returns (string);\r\n}\r\n",
+  "sourcePath": "B:\\Block Chain Development\\Advanced Blockchain Technology\\Decentraland\\Truffle\\contracts\\metadata\\IMetadataHolder.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/metadata/IMetadataHolder.sol",
+    "exportedSymbols": {
+      "IMetadataHolder": [
+        6342
+      ]
+    },
+    "id": 6343,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6331,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".22"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:28"
+      },
+      {
+        "absolutePath": "erc821/contracts/ERC165.sol",
+        "file": "erc821/contracts/ERC165.sol",
+        "id": 6332,
+        "nodeType": "ImportDirective",
+        "scope": 6343,
+        "sourceUnit": 48,
+        "src": "28:37:28",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 6333,
+              "name": "ERC165",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 47,
+              "src": "99:6:28",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ERC165_$47",
+                "typeString": "contract ERC165"
+              }
+            },
+            "id": 6334,
+            "nodeType": "InheritanceSpecifier",
+            "src": "99:6:28"
+          }
+        ],
+        "contractDependencies": [
+          47
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 6342,
+        "linearizedBaseContracts": [
+          6342,
+          47
+        ],
+        "name": "IMetadataHolder",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 6341,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "getMetadata",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 6337,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6336,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6341,
+                  "src": "132:7:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6335,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "132:7:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "131:23:28"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 6340,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6339,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 6341,
+                  "src": "178:6:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 6338,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "178:6:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "177:8:28"
+            },
+            "scope": 6342,
+            "src": "111:75:28",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6343,
+        "src": "71:118:28"
+      }
+    ],
+    "src": "0:191:28"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/metadata/IMetadataHolder.sol",
+      "exportedSymbols": {
+        "IMetadataHolder": [
+          6342
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".22"
+          ]
+        },
+        "id": 6331,
+        "name": "PragmaDirective",
+        "src": "0:24:28"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 48,
+          "absolutePath": "erc821/contracts/ERC165.sol",
+          "file": "erc821/contracts/ERC165.sol",
+          "scope": 6343,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 6332,
+        "name": "ImportDirective",
+        "src": "28:37:28"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            47
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            6342,
+            47
+          ],
+          "name": "IMetadataHolder",
+          "scope": 6343
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "ERC165",
+                  "referencedDeclaration": 47,
+                  "type": "contract ERC165"
+                },
+                "id": 6333,
+                "name": "UserDefinedTypeName",
+                "src": "99:6:28"
+              }
+            ],
+            "id": 6334,
+            "name": "InheritanceSpecifier",
+            "src": "99:6:28"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": true,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getMetadata",
+              "payable": false,
+              "scope": 6342,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 6341,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 6335,
+                        "name": "ElementaryTypeName",
+                        "src": "132:7:28"
+                      }
+                    ],
+                    "id": 6336,
+                    "name": "VariableDeclaration",
+                    "src": "132:7:28"
+                  }
+                ],
+                "id": 6337,
+                "name": "ParameterList",
+                "src": "131:23:28"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 6341,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 6338,
+                        "name": "ElementaryTypeName",
+                        "src": "178:6:28"
+                      }
+                    ],
+                    "id": 6339,
+                    "name": "VariableDeclaration",
+                    "src": "178:6:28"
+                  }
+                ],
+                "id": 6340,
+                "name": "ParameterList",
+                "src": "177:8:28"
+              }
+            ],
+            "id": 6341,
+            "name": "FunctionDefinition",
+            "src": "111:75:28"
+          }
+        ],
+        "id": 6342,
+        "name": "ContractDefinition",
+        "src": "71:118:28"
+      }
+    ],
+    "id": 6343,
+    "name": "SourceUnit",
+    "src": "0:191:28"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-02-03T17:24:10.832Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

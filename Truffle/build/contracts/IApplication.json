@@ -1,0 +1,254 @@
+{
+  "contractName": "IApplication",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.18;\r\n\r\n\r\ncontract IApplication {\r\n  function initialize(bytes data) public;\r\n}\r\n",
+  "sourcePath": "B:\\Block Chain Development\\Advanced Blockchain Technology\\Decentraland\\Truffle\\contracts\\upgradable\\IApplication.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/upgradable/IApplication.sol",
+    "exportedSymbols": {
+      "IApplication": [
+        7587
+      ]
+    },
+    "id": 7588,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7581,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".18"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:33"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 7587,
+        "linearizedBaseContracts": [
+          7587
+        ],
+        "name": "IApplication",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 7586,
+            "implemented": false,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "initialize",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7584,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7583,
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7586,
+                  "src": "77:10:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 7582,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "77:5:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "76:12:33"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 7585,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "95:0:33"
+            },
+            "scope": 7587,
+            "src": "57:39:33",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7588,
+        "src": "30:69:33"
+      }
+    ],
+    "src": "0:101:33"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/upgradable/IApplication.sol",
+      "exportedSymbols": {
+        "IApplication": [
+          7587
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 7581,
+        "name": "PragmaDirective",
+        "src": "0:24:33"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            7587
+          ],
+          "name": "IApplication",
+          "scope": 7588
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "documentation": null,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "initialize",
+              "payable": false,
+              "scope": 7587,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "data",
+                      "scope": 7586,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes",
+                          "type": "bytes"
+                        },
+                        "id": 7582,
+                        "name": "ElementaryTypeName",
+                        "src": "77:5:33"
+                      }
+                    ],
+                    "id": 7583,
+                    "name": "VariableDeclaration",
+                    "src": "77:10:33"
+                  }
+                ],
+                "id": 7584,
+                "name": "ParameterList",
+                "src": "76:12:33"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 7585,
+                "name": "ParameterList",
+                "src": "95:0:33"
+              }
+            ],
+            "id": 7586,
+            "name": "FunctionDefinition",
+            "src": "57:39:33"
+          }
+        ],
+        "id": 7587,
+        "name": "ContractDefinition",
+        "src": "30:69:33"
+      }
+    ],
+    "id": 7588,
+    "name": "SourceUnit",
+    "src": "0:101:33"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-02-03T17:24:10.884Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
