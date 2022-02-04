@@ -68,9 +68,39 @@ error:
 8. RUN:  npx hardhat run scripts/deploy.js --network ropsten
 
     error: ProviderError: max code size exceeded
+    
+    SOLVED: update Hardhat config file compiler: compilers:
+    [
+      {
+        version: "0.4.24",
+        settings: {
+         optimizer: {
+           enabled: true,
+           runs: 999999
+         },
+         evmVersion: "byzantium", 
+         outputSelection: {
+          "*": {
+            "": [
+              "ast"
+            ],
+            "*": [
+              "evm.bytecode.object",
+              "evm.deployedBytecode.object",
+              "abi",
+              "evm.bytecode.sourceMap",
+              "evm.deployedBytecode.sourceMap",
+              "metadata"
+            ]
+          },
+        }
+        }
+      }
+    ]
+    
+    
 
-
-
+![img5](https://user-images.githubusercontent.com/90293555/152577652-4179a2e6-daaa-4c52-9405-022bae29aee6.jpg)
 
 
 
