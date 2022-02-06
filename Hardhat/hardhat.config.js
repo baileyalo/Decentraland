@@ -5,24 +5,33 @@ module.exports = {
   solidity: {
     compilers: [
       {
-        version: "0.4.18",
-      },
-          {
-        version: "0.4.21",
-      },
-          {
-        version: "0.4.23",
-      },
-      {
+        solc
         version: "0.4.24",
-        settings: {},
-        optimizer: {
-          enabled: true,
-          runs: 500
+        settings: {
+         optimizer: {
+           enabled: true,
+           runs: 999999
+         }
+        },
+         evmVersion: "byzantium", 
+         outputSelection: {
+          "*": {
+            "": [
+              "ast"
+            ],
+            "*": [
+              "evm.bytecode.object",
+              "evm.deployedBytecode.object",
+              "abi",
+              "evm.bytecode.sourceMap",
+              "evm.deployedBytecode.sourceMap",
+              "metadata"
+            ]
+          },
         }
-
-      },
-    ],
+        }
+      }
+    ]
   },
    networks: {
       hardhat: {},

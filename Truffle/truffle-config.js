@@ -23,7 +23,7 @@ module.exports = {
     version : "0.4.24",
     optimizer: {
       enabled: true,
-      runs: 200
+      runs: 999999
     }
   }
   },
@@ -37,7 +37,7 @@ module.exports = {
     development: {
       host: 'localhost',
       port: 8545,
-      gas: 20000000000,
+      gas: 10000000,
       gasPrice:6721975 ,
       network_id: '*'
     },
